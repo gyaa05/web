@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		.header {
+			height: 50px;
+			width: 100%;
+            display: flex;
+            padding-bottom: 10px;
+		}
+		.menu-box {
+			float: left;
+			border-style: inset;
+			border-radius: 10px;
+			text-decoration: none;
+			font-style: italic;
+			color: #2F4F4F;
+			text-align: center;
+			border-color: #DEB887;
+			background-color: #DEB887;
+            flex: 1;
+            position: relative;
+		}
+		.menu-box:hover {
+			background-color: #F5DEB3;
+		}
+        .menu-box p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+		.main {
+			position: relative;
+			background-position: center;
+			background-size: 100% 100%;
+			background-color: rgb(244, 164, 96, .5);
+			border-radius : 10px;
+		}
+		.text-in-main {
+			position: relative;
+			color: #FFF8DC;
+			text-align: center;
+		}
+		.footer {
+			width: 100%;
+			height: 35px;
+			background-color: #F4A460;
+			border-radius: 10px;
+			text-align: center;
+			font-style: italic;
+		}
+		input{
+			width:  200px;
+		}
+	</style>
+</head>
+<body style="background-image: url('./static/index_phone.jpg')">
+	<div class="header">
+        <a href ="about.html" class="menu-box"><p>About</p></a>
+		<button onclick="authorize();" id="registration" class="menu-box"><p>Авторизоваться</p></button>
+		<button onclick="deleteCookie();" id="delete" class= "menu-box" style="display: none;">Разавторизоваться</button>
+		<p id="naming"></p>
+		<script src="cookie.js"></script>
+	</div>
+	<div class="main">
+		<form action = "form.php" method = post>
+			<p class="text-in-main">Оставьте в этой форме данные про своего котeка</p>
+			<p class = "text-in-main">
+				Введите имя своего котека: <input required type="text" name = name_koteka><br>
+				Введите возраст своего котека: <input required type="number" min="0" max="100" name = age_koteka><br>
+				Какого цвета ваш котек: <input required type="text" name = color_koteka></p>
+				<p class="text-in-main"><button type="submit">Отправить данные котека</button></p>
+
+		</form>
+		<p class="text-in-main"><button type="submit">Посмотреть на котеков</p>
+	</div>
+	<div class="footer">
+		<p style="padding:10px;">Создано при поддержке ВГУ</p>
+	</div>
+
+</body>
+</html>

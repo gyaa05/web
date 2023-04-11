@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<style>
+		.header {
+			height: 50px;
+			width: 100%;
+            display: flex;
+            padding-bottom: 10px;
+		}
+		.menu-box {
+			float: left;
+			border-style: inset;
+			border-radius: 10px;
+			text-decoration: none;
+			font-style: italic;
+			color: #2F4F4F;
+			text-align: center;
+			border-color: #DEB887;
+			background-color: #DEB887;
+            flex: 1;
+            position: relative;
+		}
+		.menu-box:hover {
+			background-color: #F5DEB3;
+		}
+        .menu-box p {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+		.main {
+			position: relative;
+			background-image: url(static/phone.jpg);
+			background-position: center;
+			background-size: cover;
+			height: 500px;
+			border-radius:  10px;
+		}
+		.main::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(0, 0, 0, .7);
+			z-index: 2;
+			border-radius:  10px;
+		}
+		.text-in-main {
+			position: relative;
+			z-index: 3;
+			color: #FFF8DC;
+			text-align: center;
+			padding: 10px;
+		}
+		.footer {
+			width: 100%;
+			height: 35px;
+			background-color: #F4A460;
+			border-radius: 10px;
+			text-align: center;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body style="background-color: #FFDEAD;">
+	<div class="header">
+        <a href ="index.html" class="menu-box"><p>На главную</p></a>
+		<a href ="https://vk.com/kotz1k" class="menu-box"><p>VK</p></a>
+		<a href ="https://t.me/kotz1k" class="menu-box"><p>Telegram</p></a>
+		<a href ="mailto:gyaa05@mail.ru" class="menu-box"><p>Почта</p></a>
+	</div>
+	<div class="main">
+		<div class="text-in-main">
+			<p style="font-size:20px;" id = "main_text">Всем привет, меня зовут Ярослав<br>
+                Я учусь на Факультете Компьютерных Наук Воронежского Государственного Университета<br>
+                На данном сайте Вы увидите мой проект "Хранилище котиков".<br>
+                В чем его суть: вы можете добавить сюда котика и посмотреть список со всеми котиками.(^._.^)
+            </p>
+        </div>
+	</div>
+	<div class="footer">
+		<p style="padding:10px;">Создано при поддержке ВГУ</p>
+	</div>
+</body>
+</html>
